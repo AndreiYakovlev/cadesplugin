@@ -3,6 +3,15 @@ declare namespace CAPICOM {
         readonly Version: Promise<number>;
         readonly Thumbprint: Promise<string>;
         readonly SubjectName: Promise<string>;
+        readonly IssuerName: Promise<string>;
+        readonly ValidFromDate: Promise<VarDate>;
+        readonly ValidToDate: Promise<VarDate>;
+        HasPrivateKey(): Promise<boolean>;
+        IsValid(): Promise<ICertificateStatusAsync>;
+    }
+
+    interface ICertificateStatusAsync {
+        readonly Result: Promise<boolean>;
     }
 
     interface ICertificatesAsync {
