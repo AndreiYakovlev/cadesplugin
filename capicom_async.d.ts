@@ -3,6 +3,7 @@ declare namespace CAPICOM {
         readonly Version: Promise<number>;
         readonly Thumbprint: Promise<string>;
         readonly SubjectName: Promise<string>;
+        readonly SerialNumber: Promise<string>;
         readonly IssuerName: Promise<string>;
         readonly ValidFromDate: Promise<VarDate>;
         readonly ValidToDate: Promise<VarDate>;
